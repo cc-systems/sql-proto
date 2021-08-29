@@ -1,0 +1,3 @@
+protoc-gen-sqlproto/protoc-gen-sqlproto
+*.pb.go
+*.pb.sql

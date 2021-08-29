@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "github.com/cc-systems/sql-proto/gensql";
+
+extend google.protobuf.FieldOptions {
+    optional bool primary = 50000;
+}

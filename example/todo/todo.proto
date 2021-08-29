@@ -1,0 +1,26 @@
+syntax = "proto3";
+package todo;
+
+import "gensql/proto/gensql.proto";
+
+option go_package = "example/todo";
+
+message Author {
+    string id = 1 [(primary) = true];
+    string name = 2;
+    string email = 3;
+    optional string nickname = 4;
+}
+
+message ToDo {
+    string id = 1 [(primary) = true];
+    string content = 2;
+    bool done = 3;
+    Author author = 4;
+    repeated string tags = 5;
+}
+
+message Folder {
+    string id = 1 [(primary) = true];
+    repeated ToDo todos = 2;
+}
